@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function Numbers() {
   const [result, setResult] = useState<number[]>([]);
@@ -26,6 +26,10 @@ function Numbers() {
     }, 5000);
     setAlert(true);
   };
+
+  useEffect(() => {
+    luckyNumber();
+  }, []);
 
   return (
     <div
