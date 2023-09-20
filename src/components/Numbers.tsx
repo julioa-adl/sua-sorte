@@ -15,6 +15,7 @@ function Numbers() {
         break;
       }
     }
+    sortNumbers.sort((a, b) => a - b);
     setResult([...sortNumbers]);
     sortNumbers.length = 0;
   }
